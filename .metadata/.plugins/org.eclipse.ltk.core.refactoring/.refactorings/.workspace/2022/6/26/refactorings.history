@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;com.cvg.msvc-users-commons&apos;" deleteContents="true" description="Delete resource &apos;com.cvg.msvc-users-commons&apos;" element1="/com.cvg.msvc-users-commons" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1655955767172"/>
+</session>

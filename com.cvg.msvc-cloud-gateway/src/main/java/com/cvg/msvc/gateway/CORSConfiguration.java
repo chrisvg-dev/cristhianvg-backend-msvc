@@ -10,9 +10,9 @@ import org.springframework.web.reactive.config.CorsRegistry;
 import org.springframework.web.reactive.config.WebFluxConfigurer;
 
 @Configuration
-public class CORSConfiguration implements WebFluxConfigurer {
+public class CORSConfiguration /**implements WebFluxConfigurer */{
 	
-	@Override
+	/**@Override
 	public void addCorsMappings(CorsRegistry registry) {
 		registry.addMapping("/**")
 			.allowedOrigins("http://localhost:4200")
@@ -31,6 +31,6 @@ public class CORSConfiguration implements WebFluxConfigurer {
         UrlBasedCorsConfigurationSource corsConfigurationSource = new UrlBasedCorsConfigurationSource();
         corsConfigurationSource.registerCorsConfiguration("/**", corsConfiguration);
         return new CorsWebFilter(corsConfigurationSource);
-    }
+    }*/
 
 }

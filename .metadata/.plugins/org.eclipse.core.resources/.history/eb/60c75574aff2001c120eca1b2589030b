@@ -1,0 +1,24 @@
+package com.cvg.msvc.gatewaysecurity;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.http.HttpMethod;
+import org.springframework.security.config.annotation.web.reactive.EnableWebFluxSecurity;
+import org.springframework.security.config.web.server.ServerHttpSecurity;
+import org.springframework.security.web.server.SecurityWebFilterChain;
+
+@EnableWebFluxSecurity
+public class SpringSecurityConfig {
+	
+	@Bean
+	SecurityWebFilterChain configure(ServerHttpSecurity http) {
+		return http.authorizeExchange()
+				.pathMatchers("/api/auth/**").permitAll()
+				.pathMatchers(HttpMethod.GET, 
+						"/api/blog", 
+						"/api/portfolio").permitAll()
+				.anyExchange().authenticated()
+				.and().csrf().disable()
+				.build();
+	}
+
+}

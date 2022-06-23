@@ -1,0 +1,5 @@
+package com.cvg.msvc.gatewaysecurity;
+
+public class SpringSecurityConfig {
+
+}
