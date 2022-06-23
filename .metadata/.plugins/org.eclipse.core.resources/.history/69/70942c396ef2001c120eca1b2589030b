@@ -1,0 +1,5 @@
+package com.cvg.msvc.oauth.client;
+
+public interface UserFeignClient {
+
+}

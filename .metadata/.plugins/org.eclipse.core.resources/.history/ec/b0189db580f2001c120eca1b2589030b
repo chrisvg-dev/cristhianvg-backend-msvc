@@ -1,0 +1,5 @@
+package com.cvg.msvc.oauth.service;
+
+public interface IUserService {
+
+}

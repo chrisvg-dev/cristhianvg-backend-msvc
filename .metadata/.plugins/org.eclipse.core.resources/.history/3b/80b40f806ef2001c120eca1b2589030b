@@ -1,0 +1,18 @@
+package com.cvg.msvc.oauth.models.entity;
+
+import java.time.LocalDateTime;
+import java.util.Set;
+
+
+public class UserModel {
+	private Long id;
+    private Set<RolModel> rol;
+    private String name;
+    private String lastName;
+    private String email;
+    private String password;
+    private String status;
+    private LocalDateTime created;
+    
+    
+}

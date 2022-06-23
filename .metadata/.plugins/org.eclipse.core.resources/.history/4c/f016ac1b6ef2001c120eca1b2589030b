@@ -1,0 +1,5 @@
+package com.cvg.msvc.oauth.models.entity;
+
+public class RolModel {
+
+}

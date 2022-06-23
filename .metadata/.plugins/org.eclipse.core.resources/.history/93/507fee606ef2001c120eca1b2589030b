@@ -1,0 +1,24 @@
+package com.cvg.msvc.oauth.models.entity;
+
+import java.time.LocalDateTime;
+import java.util.Set;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class UserModel {
+	private Long id;
+    private Set<RolModel> rol;
+    private String name;
+    private String lastName;
+    private String email;
+    private String password;
+    private String status;
+    private LocalDateTime created;
+    
+    
+}

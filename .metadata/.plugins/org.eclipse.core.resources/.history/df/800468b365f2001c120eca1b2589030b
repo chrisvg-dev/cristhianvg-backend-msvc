@@ -1,0 +1,18 @@
+spring:
+  cloud:
+    gateway:
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedHeaders: "*"
+            allowedMethods: "*"
+      routes:
+      - id: msvc-usuarios
+        uri: lb://msvc-usuarios
+        predicates:
+        - Path=/api/auth/**
+        filters:
+        - StripPrefix=2
+      
+          

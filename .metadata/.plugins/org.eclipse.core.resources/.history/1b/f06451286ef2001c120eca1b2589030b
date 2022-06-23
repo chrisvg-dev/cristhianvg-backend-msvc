@@ -1,0 +1,23 @@
+package com.cvg.msvc.oauth.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+
+import com.cvg.msvc.oauth.client.UserFeignClient;
+import com.cvg.msvc.oauth.models.entity.UserModel;
+
+public class UserService implements UserDetailsService {
+	
+	@Autowired
+	private UserFeignClient client;
+
+	@Override
+	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+		UserModel user = this.client.findByUsername(username);
+		return new User(username.get, username, false, false, false, false, null);
+	}
+
+}
