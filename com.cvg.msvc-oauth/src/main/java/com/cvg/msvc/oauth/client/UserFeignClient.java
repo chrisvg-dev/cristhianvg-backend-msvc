@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.cvg.msvc.oauth.models.entity.UserModel;
 
-@FeignClient(name = "msvc-usuarios")
+@FeignClient(name = "msvc-users")
 public interface UserFeignClient {
 	@GetMapping("/users/find-email")
 	UserModel findByUsername(@RequestParam("email") String email);

@@ -32,7 +32,7 @@ public class SpringScurityConfig extends WebSecurityConfigurerAdapter {
 	@Autowired
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 		auth.userDetailsService(userService).passwordEncoder( passwordEncoder() );
-		super.configure(auth);
+		//super.configure(auth);
 	}
 		
 }

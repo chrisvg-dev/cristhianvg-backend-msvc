@@ -1,0 +1,28 @@
+package com.cvg.msvc.gateway.security;
+
+import javax.crypto.SecretKey;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.security.authentication.ReactiveAuthenticationManager;
+import org.springframework.security.core.Authentication;
+import org.springframework.stereotype.Component;
+
+import io.jsonwebtoken.security.Keys;
+import reactor.core.publisher.Mono;
+
+@Component
+public class AuthenticationManagerJwt implements ReactiveAuthenticationManager {
+	
+	@Value("${auth.secret.key}")
+	private String secretKey;
+
+	@Override
+	public Mono<Authentication> authenticate(Authentication authentication) {
+		// TODO Auto-generated method stub
+		return Mono.just( authentication.getCredentials().toString() )
+				.map( token  -> {
+					SecretKey key = Keys.hmacShaKeyFor(secretKey);
+				} );
+	}
+
+}

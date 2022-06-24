@@ -1,0 +1,19 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: msvc-usuarios
+        uri: lb://msvc-usuarios
+        predicates:
+        - Path=/api/auth/**
+        filters:
+        - StripPrefix=2
+        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+      - id: msvc-oauth
+        uri: lb://msvc-oauth
+        predicates:
+        - Path=/api/security/**
+        filters:
+        - StripPrefix=2
+      
+          

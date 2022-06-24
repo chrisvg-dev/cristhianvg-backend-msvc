@@ -2,8 +2,8 @@ spring:
   cloud:
     gateway:
       routes:
-      - id: msvc-usuarios
-        uri: lb://msvc-usuarios
+      - id: msvc-users
+        uri: lb://msvc-users
         predicates:
         - Path=/api/auth/**
         filters:
