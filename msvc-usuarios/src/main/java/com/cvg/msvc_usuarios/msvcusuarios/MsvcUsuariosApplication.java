@@ -29,12 +29,12 @@ public class MsvcUsuariosApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		List<Rol> roles = Arrays.asList(
+		/**List<Rol> roles = Arrays.asList(
 				new Rol(0L, RolName.ROLE_ROOT, "Some description"),
 				new Rol(0L, RolName.ROLE_WRITER, "Some description"),
 				new Rol(0L, RolName.ROLE_READER, "Some description"),
 				new Rol(0L, RolName.ROLE_IAM, "Some description")
 		);
-		this.rolRepository.saveAll( roles );
+		this.rolRepository.saveAll( roles );*/
 	}
 }

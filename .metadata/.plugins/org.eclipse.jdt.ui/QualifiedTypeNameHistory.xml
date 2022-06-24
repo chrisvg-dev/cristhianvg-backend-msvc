@@ -34,5 +34,7 @@
     <fullyQualifiedTypeName name="org.springframework.security.core.context.ReactiveSecurityContextHolder"/>
     <fullyQualifiedTypeName name="org.springframework.security.core.Authentication"/>
     <fullyQualifiedTypeName name="org.bouncycastle.util.encoders.UTF8"/>
+    <fullyQualifiedTypeName name="java.security.Key"/>
     <fullyQualifiedTypeName name="io.jsonwebtoken.SignatureAlgorithm"/>
+    <fullyQualifiedTypeName name="javax.crypto.spec.SecretKeySpec"/>
 </qualifiedTypeNameHistroy>

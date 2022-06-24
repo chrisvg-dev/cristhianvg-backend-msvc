@@ -10,16 +10,16 @@ import org.springframework.web.reactive.config.CorsRegistry;
 import org.springframework.web.reactive.config.WebFluxConfigurer;
 import org.springframework.web.reactive.config.WebFluxConfigurerComposite;
 
-@Configuration
+//@Configuration
 public class CorsConfig implements WebFluxConfigurer {
 	@Override
 	public void addCorsMappings(CorsRegistry registry) {
 		registry.addMapping("/**")
-			.allowedOrigins("http://localhost:4200")
+			.allowedOrigins("*")
 			.allowedHeaders("*")
 			.allowedMethods("*").exposedHeaders(HttpHeaders.SET_COOKIE);;
 	}
-    @Bean
+    //@Bean
     CorsWebFilter  corsWebFilter() {
         CorsConfiguration corsConfiguration = new CorsConfiguration();
         //corsConfiguration.setAllowCredentials(true);
